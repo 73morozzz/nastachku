@@ -2,8 +2,7 @@
   .layout-line
     %p.infoline__left
       %b 10-11 апреля 2015 года,
-      г. Ульяновск,
-      Ленинский мемориал
+      Ленинский мемориал, Ульяновск
     %p.infoline__right
       - unless current_user
-        = link_to "Возможно пойду", new_user_path
+        = link_to "Купить билет (#{Pricelist.ticket_price}р.)", buy_now_path
