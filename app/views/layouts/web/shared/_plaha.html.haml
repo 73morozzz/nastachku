@@ -5,4 +5,5 @@
       г. Ульяновск,
       Ленинский мемориал
     %p.infoline__right
-      = content_for :plaha
+      - unless current_user
+        = link_to "Возможно пойду", new_user_path
