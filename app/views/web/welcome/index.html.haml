@@ -1,5 +1,9 @@
+- content_for :plaha do
+  - unless current_user
+    = link_to "Возможно пойду", new_user_path
+
 = render "themes"
 #lectures
   :javascript
     render_lectures(#{my_lectures(@lectures)});
-  
+
