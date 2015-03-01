@@ -7,11 +7,8 @@ class Lecture < ActiveRecord::Base
                   :listener_votings_count, :lecture_votings_count, :type, :state,
                   :state_event
 
-  validates :title, presence: true
-  validates :thesises, presence: true
   belongs_to :workshop
   belongs_to :user
-
   has_many :listener_votings, as: :voteable, extend: [Extensions::VotingExtension]
   has_many :lecture_votings, as: :voteable, extend: [Extensions::VotingExtension]
   has_many :listeners, through: :listener_votings, source: :user
@@ -20,6 +17,10 @@ class Lecture < ActiveRecord::Base
   has_many :halls, through: :slots
 
   mount_uploader :presentation, EventPresentationUploader
+
+  validates :title, presence: true
+  validates :thesises, presence: true
+  validates :workshop, presence: true
 
   audit :title, :thesises, :workshop, :user
 
