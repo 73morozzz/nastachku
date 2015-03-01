@@ -1,6 +1,5 @@
 class TicketCode < ActiveRecord::Base
-  attr_accessible :code, :distributor_id, :category, :state_event, :price, :ticket, :afterparty_ticket,
-                  :kind
+  attr_accessible :code, :distributor_id, :category, :state_event, :price, :ticket, :afterparty_ticket, :kind
 
   belongs_to :distributor
   has_one :ticket

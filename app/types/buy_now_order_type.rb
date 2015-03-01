@@ -18,13 +18,6 @@ class BuyNowOrderType
   validates :payment_system, presence: true
   validate :buys_at_least_one_ticket
 
-  attr_reader :errors
-
-  def initialize(*args)
-    @errors = ActiveModel::Errors.new(self)
-    super(*args)
-  end
-
   def persisted?
     false
   end
