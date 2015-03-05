@@ -138,10 +138,9 @@ Nastachku::Application.routes.draw do
       resources :audits, only: [:index]
       resources :topics
       resources :distributors, except: :show
-      resources :ticket_codes, only: [:index, :new, :create]
       resources :tickets, only: [:index, :show]
       resources :afterparty_tickets, only: [:index, :show]
-
+      resources :ticket_codes, only: [:index, :new, :create, :destroy]
       resources :events
       resources :workshops
       resources :halls
