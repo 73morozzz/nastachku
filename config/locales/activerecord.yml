@@ -8,6 +8,7 @@ ru:
       distributor: Распространитель
       ticket_code: Код активации
       order: 'Заказ'
+      lecture: Доклад
 
     attributes:
       distributor:
@@ -34,7 +35,7 @@ ru:
       lecture:
         state_event: 'Действие'
         title: 'Название'
-        presentation: 'Добавить презентацию'
+        presentation: Презентация
         thesises: 'Тезисы'
         user: 'Докладчик'
         start_time: 'Время начала'
